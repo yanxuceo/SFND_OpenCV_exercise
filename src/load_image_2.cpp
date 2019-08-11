@@ -11,7 +11,6 @@ void loadImage2()
 {
     for (int i = 5; i <= 9; i++)
     {
-
         // create file name
         ostringstream imgNumber;                   // #include <sstream>
         imgNumber << setfill('0') << setw(4) << i; // #include <iomanip>
