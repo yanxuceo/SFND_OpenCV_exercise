@@ -7,7 +7,7 @@ set(CMAKE_CXX_FLAGS, "${CXX_FLAGS}")
 
 project(camera_fusion)
 
-find_package(OpenCV 3.4 REQUIRED)
+find_package(OpenCV 4.1 REQUIRED)
 
 include_directories(${OpenCV_INCLUDE_DIRS})
 link_directories(${OpenCV_LIBRARY_DIRS})
@@ -43,3 +43,9 @@ target_link_libraries (magnitude_sobel ${OpenCV_LIBRARIES})
 
 add_executable (cornerness_harris src/cornerness_harris.cpp)
 target_link_libraries (cornerness_harris ${OpenCV_LIBRARIES})
+
+add_executable (describe_keypoints src/describe_keypoints.cpp)
+target_link_libraries (describe_keypoints ${OpenCV_LIBRARIES})
+
+add_executable (detect_keypoints src/detect_keypoints.cpp)
+target_link_libraries (detect_keypoints ${OpenCV_LIBRARIES})
